@@ -4,15 +4,12 @@ import styled from 'styled-components';
 
 
 const Character = (props) =>{
-const {name} = props;
+const {name, height} = props;
 return (
     <StyleDiv>
         <div>
-            <div className='names'>
-                 <h1>{name}</h1>
-            </div>
-           
-            
+            <h1>{name}</h1>
+            <p>Height: {height}</p>
         </div>
     </StyleDiv>
     
@@ -21,7 +18,7 @@ return (
 }
 
 const StyleDiv = styled.div`
-background-color: white;
+background-color: lightgray;
 width: 50%;
 display: flex;
 flex-direction: row;
@@ -37,6 +34,13 @@ h1{
     font-family: papyrus;
     /* margin: 5%;
     padding: 5%; */
+}
+p{
+    font-style: papyrus;
+    font-size: 2rem;
+    background-color: black;
+    color: white;
+    padding: 2%;
 }
 
 `

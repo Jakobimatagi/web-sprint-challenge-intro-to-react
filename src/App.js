@@ -31,7 +31,7 @@ console.log(swData);
       <h1 className="Header">Characters</h1>
       {/* <Characters name={swData.name}/> */}
       {swData.map((sw) => {
-        return <Characters key={sw.name} name={sw.name} />
+        return <Characters key={sw.name} name={sw.name} height={sw.height} />
       })}
     </div>
     
