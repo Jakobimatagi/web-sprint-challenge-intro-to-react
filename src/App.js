@@ -15,7 +15,7 @@ const App = () => {
   axios
   .get(`${BASE_URL}${API_KEY}`)
   .then((res) =>{
-    setSWData(res.data);
+    setSWData(res.data.results);
 console.log(res.data);
 console.log(swData);
 // console.log(setSWData);
@@ -29,8 +29,10 @@ console.log(swData);
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      <Characters name={swData.name}/>
-      
+      {/* <Characters name={swData.name}/> */}
+      {swData.map((sw) => {
+        return <Characters key={sw.name} name={sw.name} />
+      })}
     </div>
     
   );

@@ -8,7 +8,10 @@ const {name} = props;
 return (
     <StyleDiv>
         <div>
-            <h1>{name}</h1>
+            <div className='names'>
+                 <h1>{name}</h1>
+            </div>
+           
             
         </div>
     </StyleDiv>
@@ -22,15 +25,18 @@ background-color: white;
 width: 50%;
 display: flex;
 flex-direction: row;
-justify-content: flex-start;
-margin-left: 25%;
+justify-content: center;
+margin: 0 auto;
+margin-bottom: 10%;
 height: 60vh;
+
+
 
 h1{
     font-size: 3rem;
-    
-    margin: 5%;
-    padding: 5%;
+    font-family: papyrus;
+    /* margin: 5%;
+    padding: 5%; */
 }
 
 `
