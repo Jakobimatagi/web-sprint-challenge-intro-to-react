@@ -9,14 +9,15 @@ import Characters from './components/Character'
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
- const [swData, setSWData] = useState({})
+ const [swData, setSWData] = useState([])
 
  useEffect(() => {
   axios
   .get(`${BASE_URL}${API_KEY}`)
   .then((res) =>{
-setSWData(res.data.results)
-console.log(res.data.results);
+  setSWData(res.data);
+// console.log(res.data.results);
+// console.log(setSWData);
   })
 .catch((err) => console.log(err));
  }, []);
@@ -28,6 +29,7 @@ console.log(res.data.results);
     <div className="App">
       <h1 className="Header">Characters</h1>
       <Characters name={swData.name}/>
+      
     </div>
     
   );

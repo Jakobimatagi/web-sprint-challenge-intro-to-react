@@ -8,7 +8,7 @@ const {name} = props;
 return (
     <StyleDiv>
         <div>
-            <h1>test    name</h1>
+            <h1>{name}</h1>
             
         </div>
     </StyleDiv>
