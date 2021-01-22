@@ -15,8 +15,9 @@ const App = () => {
   axios
   .get(`${BASE_URL}${API_KEY}`)
   .then((res) =>{
-  setSWData(res.data);
-// console.log(res.data.results);
+    setSWData(res.data);
+console.log(res.data);
+console.log(swData);
 // console.log(setSWData);
   })
 .catch((err) => console.log(err));
